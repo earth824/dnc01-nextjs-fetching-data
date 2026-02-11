@@ -1,10 +1,10 @@
 import prisma from '@/libs/prisma/prisma';
 
-export const simulateLoading = () => {
+export const simulateLoading = (second: number = 5) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(null);
-    }, 5000);
+    }, second * 1000);
   });
 };
 
